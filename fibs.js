@@ -11,3 +11,15 @@ export function fibs(number) {
   }
   return sequence;
 }
+
+export function fibsRec(number) {
+  if (number == 1) {
+    return [0];
+  } else if (number == 2) {
+    return [0, 1];
+  }
+
+  let sequence = fibsRec(number - 1);
+
+  return sequence.concat([sequence[number - 2] + sequence[number - 3]]);
+}
