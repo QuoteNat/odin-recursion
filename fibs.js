@@ -1,3 +1,8 @@
+/**
+ * An iterative fibonacci function
+ * @param {int} number Number of fibonacci elements to calculate
+ * @returns An array with number elements of the fibonacci sequence.
+ */
 export function fibs(number) {
   let sequence = [];
   for (let i = 0; i < number; i++) {
@@ -12,6 +17,11 @@ export function fibs(number) {
   return sequence;
 }
 
+/**
+ * A recursive fibonacci function
+ * @param {int} number Number of fibonacci elements to calculate
+ * @returns An array with number elements of the fibonacci sequence.
+ */
 export function fibsRec(number) {
   if (number == 1) {
     return [0];

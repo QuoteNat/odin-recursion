@@ -1,3 +1,17 @@
+/**
+ * A comparison function to be passed as an argument.
+ * @callback comparisonFunc
+ * @param {*} left Leftmost element
+ * @param {*} right Rightmost element
+ * @returns Boolean
+ */
+
+/**
+ * An implementation of mergesort in javascript
+ * @param {Array} array The array to be sorted
+ * @param {comparisonFunc} fn A comparison function to use for sorting.
+ * @returns A sorted array
+ */
 export function mergesort(array, comparisonFunc) {
   // base case
   if (array.length == 1) return array;
@@ -22,7 +36,7 @@ export function mergesort(array, comparisonFunc) {
   }
 
   if (indexLeft < left.length) {
-    while (indexLeft < left.length) {
+    for (let i = indexLeft; i < left.length; i++) {
       sorted.push(left[indexLeft]);
       indexLeft += 1;
     }
